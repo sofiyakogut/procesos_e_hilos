@@ -7,23 +7,21 @@ public class cFilPrincipal {
     System.out.println("Fil principal iniciat.");
     System.out.println("Fil secundari iniciat.");
     cFil vObjecteFil = new cFil ("#1");
-   
     Thread vFil = new Thread (vObjecteFil);
-    vFil.start ();
+    vFil.start(); 
     
+    System.out.println("Iniciant execució procés principal");
     
     try{
-    	vFil.join();
-    	System.out.println("Iniciant execució procés principal");
       for(int vComptador = 0; vComptador < 10; vComptador++){
+    	vFil.join();
         Thread.sleep(500);
         System.out.println("Despertant aturada " + vComptador + " procès principal");
       }
-      
     }catch(InterruptedException pExcepcio){
       System.out.println("Interrompent execució procès principal");
     }
-    System.out.println("Acabant execució procès principal");
+    	System.out.println("Acabant execució procès principal");
   }
 }
 

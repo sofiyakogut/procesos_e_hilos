@@ -5,7 +5,7 @@ public class cFil implements Runnable{
 	
 	 String aNomFil;
 	 int aTemporitzacio;
-	 public static int vComptador = 0;
+	
 	 
 	  
 	 public cFil(String pNomFil){
@@ -26,7 +26,7 @@ public class cFil implements Runnable{
 	   System.out.println("Iniciant execució procés " + aNomFil);
 	    try{
 	    	
-	     for(vComptador = 0; vComptador < 10; vComptador ++){
+	     for(int vComptador = 0; vComptador < 10; vComptador ++){
 	       Thread.sleep(aTemporitzacio);
 	       System.out.println("Despertant aturada " + vComptador + " procès " + aNomFil);
 	     }
